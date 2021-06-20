@@ -1,0 +1,18 @@
+{% extends "Base.html" %}
+
+{% block content %}
+<ul>
+    {% for object in customer_detail %}
+    <li> Cuatomer name: {{ object.Customer_Name }}</li>
+    <li>Customer Detail: {{ object.Customer_Detail }}</li>
+    <li>Mail ID: {{ object.Mail_ID }}</li>
+    <li>Service ID: {{ object.Service_ID }}</li>
+    <li>Service Type: {{ object.Service_Type }}</li>
+    <li>Problem Description: {{ object.Problem_Description }}</li>
+
+
+    {% empty %}
+    <li>No objects yet.</li>
+    {% endfor %}
+</ul>
+{% endblock %}
